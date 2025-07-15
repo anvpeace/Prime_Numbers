@@ -34,14 +34,31 @@ public:
 
     PrimeNumber& operator++(){
         // PrimeNumber incr_value(value);
-        ++value;
+        isPrime(value);
+        if(isPrime(value)== true){
+            ++value;
+            ++value;
+        }
+
         return *this;
+        
     };         
 
     PrimeNumber& operator--(){
         // PrimeNumber incr_value(value);
-        --value;
-        return *this;
+            --value;
+            return *this;
+        // if(isPrime(value)){
+        //     --value;
+        //     return *this;
+
+        // }else{
+        //     --value;
+        //     return *this;
+
+        // }
+
+        
     };
 
     bool operator==(PrimeNumber &rhs){
