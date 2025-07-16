@@ -41,22 +41,69 @@ public:
         return is;
     };
 
+    // prefix overload
     // PrimeNumber operator++(int){
     //     PrimeNumber incr_value(value);
-    //     ++value;
-    //     return *this;
-    // }; 
+    //     // isPrime(value);
+    //     if(isPrime(value)){
+    //         ++value;
+    //         ++value;
+            
+    //         if(isPrime(value) == 9){
+    //         value += 2;
+    //         }
+    //     }
+        
+        
+    //     // else if(isPrime(value) == 9){
+    //     //     value += 2;
+    //     // }
+
+    //     return incr_value;
+        
+    
+    // };
     PrimeNumber& operator++(){
         // PrimeNumber incr_value(value);
-        ++value;
+        isPrime(value);
+        if(isPrime(value)== true){
+            ++value;
+            ++value;
+        }else{
+            ++value;
+        }
+
         return *this;
-    };         
+        
+    };          
+
+    PrimeNumber operator--(int){
+        PrimeNumber decr_value(value);
+        --value;
+        return decr_value;
+    }; 
 
     PrimeNumber& operator--(){
         // PrimeNumber incr_value(value);
-        --value;
+        if(!isPrime(value)){
+            if(value == 9){
+                value -=2;
+            }else{
+                value -= 4;
+
+            }
+
+        }
+
         return *this;
+    
     };
+
+    // PrimeNumber& operator--(){
+    //     // PrimeNumber incr_value(value);
+    //     --value;
+    //     return *this;
+    // };
 
 
     bool operator==(PrimeNumber &rhs){

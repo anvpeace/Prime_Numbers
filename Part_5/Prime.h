@@ -18,7 +18,7 @@ private:
                 if(v % i == 0){
                     return false;
                 }
-            }
+            };
 
         };
         return true;
@@ -32,33 +32,47 @@ public:
         cout<<value<<endl;
     };
 
-    PrimeNumber& operator++(){
-        // PrimeNumber incr_value(value);
-        isPrime(value);
-        if(isPrime(value)== true){
-            ++value;
-            ++value;
-        }
+/*
+operator ++ fucntions missing - removed : werent working 
+*/
+    // PrimeNumber& operator++(){
+    //     // PrimeNumber incr_value(value);
+    //     // isPrime(value);
+    //     if(isPrime(value)== true){
+    //         if(value == 9){
+    //             ++value;
+    //             ++value;
+    //         }else{
+    //             ++value;
+    //         }
 
-        return *this;
+    //     }
+  
+
+    //     return *this;
         
-    };         
+    // };         
+
+    PrimeNumber operator--(int){
+        PrimeNumber decr_value(value);
+        --value;
+        return decr_value;
+    }; 
 
     PrimeNumber& operator--(){
         // PrimeNumber incr_value(value);
-            --value;
-            return *this;
-        // if(isPrime(value)){
-        //     --value;
-        //     return *this;
+        if(!isPrime(value)){
+            if(value == 9){
+                value -=2;
+            }else{
+                value -= 3;
 
-        // }else{
-        //     --value;
-        //     return *this;
+            }
 
-        // }
+        }
 
-        
+        return *this;
+    
     };
 
     bool operator==(PrimeNumber &rhs){

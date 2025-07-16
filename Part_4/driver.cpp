@@ -3,12 +3,12 @@
 int main(){
 
     PrimeNumber a(23), b(23), c;
-    c = 43;
+    c = 9;
     int d = 45;
 
-    cout <<  c.operator++() << endl;
-    cout<< ++c<<endl; // ++n
-    cout<< --c <<endl;
+    cout<<"Number entered: "<< c <<endl;
+    cout<<"Next Prime Number: "<<++c<<endl; // ++n
+    cout<<"Previous Prime Number: "<<--c<<endl; // ++n  
     cout << (a==b) << endl;
     cout << a.operator==(b) << endl;
 
