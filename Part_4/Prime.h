@@ -39,44 +39,12 @@ public:
     friend istream& operator>>(istream &is, PrimeNumber &r){
         is>>r.value;
         return is;
-    };
+    }
 
-    // prefix overload
-    // PrimeNumber operator++(int){
-    //     PrimeNumber incr_value(value);
-    //     // isPrime(value);
-    //     if(isPrime(value)){
-    //         ++value;
-    //         ++value;
-            
-    //         if(isPrime(value) == 9){
-    //         value += 2;
-    //         }
-    //     }
-        
-        
-    //     // else if(isPrime(value) == 9){
-    //     //     value += 2;
-    //     // }
-
-    //     return incr_value;
-        
+/*
+operator ++ fucntions missing - removed : werent working 
+*/
     
-    // };
-    PrimeNumber& operator++(){
-        // PrimeNumber incr_value(value);
-        isPrime(value);
-        if(isPrime(value)== true){
-            ++value;
-            ++value;
-        }else{
-            ++value;
-        }
-
-        return *this;
-        
-    };          
-
     PrimeNumber operator--(int){
         PrimeNumber decr_value(value);
         --value;
@@ -89,7 +57,7 @@ public:
             if(value == 9){
                 value -=2;
             }else{
-                value -= 4;
+                value -= 3;
 
             }
 
@@ -99,16 +67,15 @@ public:
     
     };
 
-    // PrimeNumber& operator--(){
-    //     // PrimeNumber incr_value(value);
-    //     --value;
-    //     return *this;
-    // };
-
-
     bool operator==(PrimeNumber &rhs){
         return value == rhs.value;
     }
+
+    bool operator!=(PrimeNumber &rhs){
+        return value != rhs.value;
+    }
+    
+
 };
 #endif
 /*
