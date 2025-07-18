@@ -6,9 +6,20 @@ int main(){
     c = 9;
     int d = 45;
 
-    cout<<"Number entered: "<< c <<endl;
-    cout<<"Next Prime Number: "<<++c<<endl; // ++n
-    cout<<"Previous Prime Number: "<<--c<<endl; // ++n  
+    // postfix operator returns the original numbers which uses c++ to call overload function
+    cout<<"Incrementation"<<endl;
+    cout<<"Number entered: "<< c++ <<endl;
+    // prefix operator for modified number
+    cout<<"Next Prime Number: "<<++c<<"\n"<<endl; // ++n
+    
+    cout<<"Decrementation"<<endl;
+    // postfix operator returns the original numbers which uses c++ to call overload function
+    cout<<"Number entered: "<< c-- <<endl;
+
+    // prefix
+    cout<<"Previous Prime Number: "<<--c<<endl; // ++n 
+
+
     cout << (a==b) << endl;
     cout << a.operator==(b) << endl;
 
