@@ -2,18 +2,25 @@
 
 int main(){
 
-    PrimeNumber a(20), b(23),c(9);
-    //  c = 45;
+    PrimeNumber a(23), b(24), c;
+    c = 9;
+    int d = 45;
 
-    // cout <<  c.operator++(14) << endl;
-    cout<<"Number entered: "<< c <<endl;
-    // cout<<"Next Prime Number: "<<++c<<endl; // ++n
-    cout<<"Previous Prime Number: "<<--c<<endl; // ++n   
-    // cout<< ++c<<endl; // ++n
+    // postfix operator returns the original numbers which uses c++ to call overload function
+    cout<<"Incrementation"<<endl;
+    cout<<"Number entered: "<< c++ <<endl;
+    // prefix operator for modified number
+    cout<<"Next Prime Number: "<<++c<<"\n"<<endl; // ++n
+    
+    cout<<"Decrementation"<<endl;
+    // postfix operator returns the original numbers which uses c++ to call overload function
+    cout<<"Number entered: "<< c-- <<endl;
+    // prefix
+    cout<<"Previous Prime Number: "<<--c<<endl; // ++n 
 
-    // cout<< --b <<endl;
-    cout << "Are 'a' and 'b' equal?: " << (a==b) << endl;
-    cout << "Are 'b' and 'c' equal?: "<< b.operator==(c) << endl;
+
+    cout << (a==b) << endl;
+    cout << a.operator==(b) << endl;
 
     return 0;
 }
